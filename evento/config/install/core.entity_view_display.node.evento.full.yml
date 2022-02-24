@@ -1,0 +1,37 @@
+#core.entity_view_display.node.evento.full.yml
+
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.evento.body
+    - field.field.node.evento.field_direccion
+    - field.field.node.evento.field_fecha_final
+    - field.field.node.evento.field_fecha_inicio
+    - field.field.node.evento.field_imagen
+    - node.type.evento
+  module:
+    - image
+    - user
+id: node.evento.full
+targetEntityType: node
+bundle: evento
+mode: full
+content:
+  field_imagen:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_direccion: true
+  field_fecha_final: true
+  field_fecha_inicio: true
+  langcode: true
+  links: true

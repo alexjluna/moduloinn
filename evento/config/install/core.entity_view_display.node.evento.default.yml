@@ -1,0 +1,50 @@
+#core.entity_view_display.node.evento.default.yml
+
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.evento.body
+    - field.field.node.evento.field_direccion
+    - field.field.node.evento.field_fecha_final
+    - field.field.node.evento.field_fecha_inicio
+    - field.field.node.evento.field_imagen
+    - node.type.evento
+  module:
+    - datetime
+    - user
+id: node.evento.default
+targetEntityType: node
+bundle: evento
+mode: default
+content:
+  field_direccion:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fecha_final:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_fecha_inicio:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_imagen: true
+  langcode: true
+  links: true
